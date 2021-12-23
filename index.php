@@ -1,14 +1,23 @@
-<?php 
+<?php
 
+use DesignPattern\CalculadoraDeDescontos;
 use DesignPattern\CalculadoraDeImpostos;
 use DesignPattern\Impostos\Icms;
 use DesignPattern\Orcamento;
 
 require './vendor/autoload.php';
 
-$calculadora = new CalculadoraDeImpostos();
+//$calculadora = new CalculadoraDeImpostos();
+//
+//$orcamento = new Orcamento();
+//$orcamento->valor = 100;
+//
+//echo $calculadora->calcular($orcamento, new Icms());
 
 $orcamento = new Orcamento();
-$orcamento->valor = 100;
+$orcamento->valor = 700;
+$orcamento->qtdItens = 4;
 
-echo $calculadora->calcular($orcamento, new Icms());
+$calculadora = new CalculadoraDeDescontos();
+
+echo $calculadora->calcular($orcamento);
