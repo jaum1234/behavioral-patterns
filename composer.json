@@ -1,0 +1,15 @@
+{
+    "name": "design/patterns",
+    "authors": [
+        {
+            "name": "jaum1234",
+            "email": "joaovitorsouzacoura@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DesignPattern\\": "src/"
+        }
+    }
+}
