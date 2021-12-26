@@ -8,6 +8,7 @@ class SemDesconto extends Desconto
 {
     public function __construct()
     {
+        parent::__construct(null);
     }
 
     public function calcularDesconto(Orcamento $orcamento): float 
