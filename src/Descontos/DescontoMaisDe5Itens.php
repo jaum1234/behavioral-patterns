@@ -8,12 +8,13 @@ use DesignPattern\Descontos\Desconto;
 
 class DescontoMaisDe5Itens extends Desconto
 {
-    public function calcularDesconto(Orcamento $orcamento): float
+    protected function deveCalcularProxDesconto($orcamento): bool
     {
-        if ($orcamento->qtdItens > 5) {
-            return $orcamento->valor*0.1;
-        }
+        return $orcamento->qtdItens > 5;
+    }
 
-        return $this->proximoDesconto->calcularDesconto($orcamento);
+    protected function desconto($orcamento): float 
+    {
+        return $orcamento->valor*0.1;
     }
 }

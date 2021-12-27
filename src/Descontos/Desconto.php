@@ -14,12 +14,16 @@ abstract class Desconto
 
     protected function calcular(Orcamento $orcamento): float
     {
-        if ($this->deveCalcularProxDesconto()) {
-            return $this->desconto();
+        if ($this->deveCalcularProxDesconto($orcamento)) {
+            return $this->desconto($orcamento);
         }
 
-        return $this->proximoDesconto->calcularDesconto($orcamento);
+        return $this->proximoDesconto->calcular($orcamento);
     } 
 
-    abstract public function calcularDesconto(Orcamento $orcamento): float;
+    //abstract public function calcularDesconto(Orcamento $orcamento): float;
+    abstract protected function deveCalcularProxDesconto($orcamento): bool;
+    abstract protected function desconto($orcamento): float;
+
+
 }
