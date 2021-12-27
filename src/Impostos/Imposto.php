@@ -6,5 +6,5 @@ use DesignPattern\Orcamento;
 
 interface Imposto
 {
-    public function calcularImposto(Orcamento $orcamento);
+    public function calcularImposto(Orcamento $orcamento): float;
 }

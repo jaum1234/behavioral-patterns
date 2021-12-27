@@ -3,6 +3,7 @@
 use DesignPattern\CalculadoraDeDescontos;
 use DesignPattern\CalculadoraDeImpostos;
 use DesignPattern\Impostos\Icms;
+use DesignPattern\Impostos\Ikcv;
 use DesignPattern\Orcamento;
 
 require './vendor/autoload.php';
@@ -21,3 +22,4 @@ $orcamento->qtdItens = 4;
 $calculadora = new CalculadoraDeDescontos();
 
 echo $calculadora->calcular($orcamento);
+
