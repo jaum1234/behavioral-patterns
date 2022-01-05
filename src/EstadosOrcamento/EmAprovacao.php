@@ -3,6 +3,8 @@
 namespace DesignPattern\EstadosOrcamento;
 
 use DesignPattern\Orcamento;
+use DesignPattern\EstadosOrcamento\Aprovado;
+use DesignPattern\EstadosOrcamento\Reprovado;
 
 class EmAprovacao extends EstadoOrcamento
 {

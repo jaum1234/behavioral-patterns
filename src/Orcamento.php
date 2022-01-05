@@ -28,11 +28,11 @@ class Orcamento
 
     public function reprovar()
     {
-        $this->estadoAtual->aprovar($this);
+        $this->estadoAtual->reprovar($this);
     }
 
     public function finalizar()
     {
-        $this->estadoAtual->aprovar($this);
+        $this->estadoAtual->finalizar($this);
     }
 }

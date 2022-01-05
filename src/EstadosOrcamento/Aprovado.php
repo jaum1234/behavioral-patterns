@@ -3,8 +3,9 @@
 namespace DesignPattern\EstadosOrcamento;
 
 use DesignPattern\Orcamento;
+use DesignPattern\EstadosOrcamento\Finalizado;
 
-class Aprovado
+class Aprovado extends EstadoOrcamento
 {
     public function calcularDescontoExtra(Orcamento $orcamento): float 
     {
